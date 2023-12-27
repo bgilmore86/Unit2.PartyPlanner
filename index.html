@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Party Planner Project</title>
+    <style>
+        /* CSS code - style web page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            border: 2px solid #CCCCCC;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .party {
+            display: flex;
+            align-items: center;
+        }
+
+        .party-div {
+            flex: 1;
+        }
+
+        .party-name {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .party-date {
+            color: #999999;
+        }
+
+        .party-time {
+            color: #999999;
+        }
+
+
+        .party-description {
+            margin-top: 10px;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #CCCCCC;
+            background-color: peachpuff;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid gray;
+        }
+
+        .form-button {
+            display: block;
+            width: 100%;
+            background-color:  lightgreen;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script src = "partyplanner.js"></script>
+    <h1>Party Planner</h1>
+    <ul id="party-list">
+        <!-- JS will autopopulate parties -->
+    </ul>
+    <div class="form">
+      <!-- <h2>Add a new party</h2> -->
+        <form id="party-form">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" required>
+            <label class="form-label" for="date">Date</label>
+            <input class="form-input" type="date" id="date" name="date" required>
+            <label class="form-label" for="time">Time</label>
+            <input class="form-input" type="time" id="time" name="time" required>
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-input" id="description" name="description" rows="5" required></textarea>
+            <button class="form-button" type="submit">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>
